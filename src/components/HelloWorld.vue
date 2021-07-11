@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h1>{{ aa }}</h1>
-    <router-link :to="{ path: '/about' }">about</router-link>
     <div>
       <el-row class="tac">
         <el-col :span="4">
@@ -10,8 +8,11 @@
             class="el-menu-vertical-demo"
             background-color="#545c64"
             text-color="#fff"
-            active-text-color="#ffd04b"
-          >
+            active-text-color="#ffd04b">
+            <div style="margin-left: 280px">
+              <label>content:</label>
+              <input v-model="aa">
+            </div>
             <el-submenu index="1">
               <template v-slot:title>
                 <i class="el-icon-s-platform"></i>
@@ -74,7 +75,7 @@ export default {
     this.$axios
       .get('http://localhost:8080/account/test')
       .then((res) => {
-        this.aa = res
+        this.aa = res.data
       })
       .catch((err) => {
         console.log(err)
