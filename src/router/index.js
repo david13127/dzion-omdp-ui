@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import AgGrid from '../components/AgGrid.vue'
 import About from '../views/About.vue'
 
 const routes = [
@@ -7,6 +8,11 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/aggrid',
+    name: 'aggrid',
+    component: AgGrid
   },
   {
     path: '/about',

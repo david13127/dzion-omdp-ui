@@ -73,7 +73,7 @@ export default {
   },
   mounted: function () {
     this.$axios
-      .get('http://localhost:8080/account/test')
+      .get('http://192.168.168.4:8080/account/test')
       .then((res) => {
         this.aa = res.data
       })

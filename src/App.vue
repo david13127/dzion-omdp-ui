@@ -2,6 +2,7 @@
   <div id="app">
     <router-link :to="{ path: '/home' }">home</router-link>
     <router-link :to="{ path: '/about' }" style="margin-left: 20px">about</router-link>
+    <router-link :to="{ path: '/aggrid' }" style="margin-left: 20px">aggrid</router-link>
     <router-view> </router-view>
   </div>
 </template>
